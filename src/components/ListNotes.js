@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import CreateNote from "./CreateNote";
+import DetailNote from "./DetailNote";
 
 function ListNotes(props) {
     const [notes, setNotes] = useState([])
@@ -27,7 +28,7 @@ function ListNotes(props) {
             <h1>Notes</h1>
             {notes.map(note => (
                 <div key={note.id}>
-                    <h2>{note.title}</h2>
+                    <DetailNote note_id={note.id}/>
                 </div>
             ))}
 
