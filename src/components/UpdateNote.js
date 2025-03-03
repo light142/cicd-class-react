@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import {baseUrl} from "../constants";
 
 function UpdateNote(props) {
     const note_id = props.note_id
@@ -11,7 +12,7 @@ function UpdateNote(props) {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:8000/notes/notes/' + note_id + '/',
+            url: baseUrl + 'notes/notes/' + note_id + '/',
             headers: {}
         };
 
@@ -45,7 +46,7 @@ function UpdateNote(props) {
         let config = {
             method: 'put',
             maxBodyLength: Infinity,
-            url: 'http://localhost:8000/notes/notes/' + note_id + '/',
+            url: baseUrl + 'notes/notes/' + note_id + '/',
             headers: {
                 'Content-Type': 'application/json'
             },

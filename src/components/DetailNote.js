@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import {baseUrl} from "../constants";
 
 function DetailNote(props) {
     const note_id = props.note_id
@@ -9,7 +10,7 @@ function DetailNote(props) {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:8000/notes/notes/' + note_id + '/',
+            url: baseUrl + 'notes/notes/' + note_id + '/',
             headers: {}
         };
 

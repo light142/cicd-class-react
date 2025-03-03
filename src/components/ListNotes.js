@@ -3,6 +3,7 @@ import axios from "axios";
 import CreateNote from "./CreateNote";
 import DetailNote from "./DetailNote";
 import UpdateNote from "./UpdateNote";
+import {baseUrl} from "../constants";
 
 function ListNotes(props) {
     const [notes, setNotes] = useState([])
@@ -10,7 +11,7 @@ function ListNotes(props) {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
-            url: 'http://localhost:8000/notes/notes/',
+            url: baseUrl + 'notes/notes/',
             headers: {}
         };
 
@@ -28,7 +29,7 @@ function ListNotes(props) {
         let config = {
             method: 'delete',
             maxBodyLength: Infinity,
-            url: 'http://localhost:8000/notes/notes/' + note_id + '/',
+            url: baseUrl + 'notes/notes/' + note_id + '/',
             headers: {}
         };
 
