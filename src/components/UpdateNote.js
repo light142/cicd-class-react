@@ -64,7 +64,7 @@ function UpdateNote(props) {
     return (
         <div>
             <p>Title: <input type="text" onChange={handleTitleChange} value={title} /></p>
-            <p>Content: <textarea onChange={handleContentChange}>{content}</textarea></p>
+            <p>Content: <textarea onChange={handleContentChange} value={content}></textarea></p>
             <button onClick={updateNote}>Update</button>
         </div>
     );

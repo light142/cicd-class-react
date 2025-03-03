@@ -22,7 +22,7 @@ function DetailNote(props) {
                 console.log(error);
             });
 
-    }, []);
+    }, [note]);
 
     return (
         <div>
