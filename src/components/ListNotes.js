@@ -24,6 +24,23 @@ function ListNotes(props) {
             });
     }, [notes]);
 
+    function deleteNote(note_id) {
+        let config = {
+            method: 'delete',
+            maxBodyLength: Infinity,
+            url: 'http://localhost:8000/notes/notes/' + note_id + '/',
+            headers: {}
+        };
+
+        axios.request(config)
+            .then((response) => {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     return (
         <div>
             <h1>Notes</h1>
@@ -31,6 +48,7 @@ function ListNotes(props) {
                 <div key={note.id}>
                     <DetailNote note_id={note.id}/>
                     <UpdateNote note_id={note.id}/>
+                    <button onClick={() => deleteNote(note.id)}>Delete</button>
                 </div>
             ))}
 
