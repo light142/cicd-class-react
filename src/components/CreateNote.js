@@ -28,7 +28,7 @@ function CreateNote(props) {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://localhost:8000/notes/notes/',
+            url: baseUrl + 'notes/notes/',
             headers: {
                 'Content-Type': 'application/json'
             },
