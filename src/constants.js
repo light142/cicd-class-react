@@ -1,2 +1,2 @@
 // export const baseUrl = "http://localhost:8000/";
-export const baseUrl = "https://django-tutorial-cicd.vercel.app/";
+export const baseUrl = "https://cicd-class-django.vercel.app/";
