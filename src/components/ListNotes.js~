@@ -49,7 +49,7 @@ function ListNotes(props) {
                 <div key={note.id}>
                     <DetailNote note_id={note.id}/>
                     <UpdateNote note_id={note.id}/>
-                    <button onClick={() => deleteNote(note.id)}>Delete Me</button>
+                    <button onClick={() => deleteNote(note.id)}>Delete</button>
                 </div>
             ))}
 
