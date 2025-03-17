@@ -26,7 +26,7 @@ function UpdateNote(props) {
                 console.log(error);
             });
 
-    }, [note_id]);
+    }, []);
 
     function handleTitleChange(e) {
         setTitle(e.target.value);
