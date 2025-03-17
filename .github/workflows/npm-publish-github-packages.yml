@@ -39,6 +39,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # test the react app
+      - name: Test
+        run: npm run test
+
       # deploy the react app to github pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
